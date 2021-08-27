@@ -1,6 +1,42 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect } from 'react'
+
+
 
 export default function Users() {
+
+const getUsers =()=>{
+  var token = localStorage.getItem("JWTtoken");
+  
+  const head =
+  {
+      headers: {
+          'Content-Type': 'application/json',
+
+          "Authorization": `Bearer ${token}`
+
+      }
+  }
+
+  axios.get("https://a4u-app.herokuapp.com/admin/users", head)
+
+
+      .then((res) => {
+        console.log(res,"all Response")
+        
+        console.log(res.data.users)
+
+      });
+
+   
+}
+
+useEffect(() => {
+  console.log("res")
+  getUsers()
+      },  [])
+
+
     return (
         <div>
             <table>

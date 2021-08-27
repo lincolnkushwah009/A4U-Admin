@@ -74,20 +74,20 @@ const Leftside = () => {
        
        
          <li className="nav-item">
-          <NavLink exact className="nav-link" to="/dashboard/tournament">
+          <NavLink exact className="nav-link" to="/dashboard/create">
             <i className="fas fa-fw fa-chart-area" />
             <span>Create </span>
           </NavLink>
         </li>
 
 
-        {/* <li className="nav-item">
-            <NavLink exact className="nav-link" to="/dashboard/shop">
+        <li className="nav-item">
+            <NavLink exact className="nav-link" to="/dashboard/package">
             <i className="fas fa-fw fa-table" />
-            <span> Create Architect/Representative</span> 
+            <span> Create Package</span> 
             
             </NavLink>
-        </li> */}
+        </li>
 
         {/*
         
